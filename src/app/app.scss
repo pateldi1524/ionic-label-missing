@@ -1,0 +1,70 @@
+.sidebar-logo {
+    padding-top: 20px;
+    margin-bottom: 5px;
+
+    .sidebar-logo-position {
+        width: 50%;
+    }
+}
+
+.username {
+    --ion-background-color: #ebebeb;
+    --ion-border-color: #ebebeb;
+    color: var(--ion-color-primary);
+    font-weight: bold;
+
+    .username-icon {
+        height: 20px;
+    }
+}
+
+.sidemenu-items {
+    --ion-border-color: white;
+    color: var(--ion-color-primary);
+    font-size: 16px;
+
+    .sidemenu-icon {
+        height: 16px;
+        margin-right: 5%;
+        margin-top: 1%;
+    }
+
+    .sidemenu-items-info {
+        color: var(--ion-color-primary);
+        margin: 0;
+        font-size: 10px;
+        margin-left: 33px;
+        margin-top: -7px;
+    }
+
+    .pending-number {
+        background-color: var(--ion-color-primary);
+        padding: 2px 5px;
+        color: #ffffff;
+        border-radius: 3px;
+        vertical-align: super;
+        font-size: 12px;
+        margin: 3px 0;
+        float: right;
+    }
+
+    .sidemenu-label {
+        font-weight: 500;
+    }
+}
+
+.app-version {
+    text-align: center;
+    font-size: 15px;
+    color: var(--ion-color-medium);
+    display: block;
+    position: relative;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 100%;
+    z-index: 10;
+}
+
+.sidemenu-width {
+    --width: 340px;
+}

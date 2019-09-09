@@ -1,0 +1,16 @@
+{
+    "email": "Email",
+    "enterEmail": "Enter email",
+    "password": "Password",
+    "enterPassword": "Enter Password",
+    "forgotPassword": "Forgot Password",
+    "login": "Log in",
+    "newAccount": "No account?",
+    "newAccountSignUp": "Sign up.",
+    "sessionExpired": "Session has expired.",
+    "titleSessionExpired": "Session expired",
+    "sessionExpiring": "Session will expire in",
+    "homePage": "Home",
+    "regNumber": "Registration",
+    "enterRegNumber": "Enter Registration"
+}

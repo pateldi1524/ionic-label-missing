@@ -1,0 +1,52 @@
+<ion-app>
+    <!-- <ion-split-pane> -->
+    <ion-menu type="overlay" class="sidemenu-width">
+
+        <ion-content>
+            <div class="sidebar-logo ion-text-center">
+                <!-- logo -->
+                <img src="assets/imgs/logo.png" alt="" class="sidebar-logo-position">
+            </div>
+            <ion-list>
+                <!-- logged in username -->
+                <ion-item class="username">
+                    <ion-label>
+                        Test user
+                    </ion-label>
+                    <ion-button fill="none" class="no-outline" slot="end" [disabled]="disabledMenuItem('username')"
+                        (click)="clickMenuOption({value:'value', url:'/change-displayname'})">
+                        <img float-right src="assets/imgs/edit-username.png" class="username-icon" alt="">
+                    </ion-button>
+                </ion-item>
+
+                <!-- page routing -->
+                <ion-item (click)="clickMenuOption(menu)" [disabled]="disabledMenuItem(menu)" class="sidemenu-items"
+                    *ngFor="let menu of appPages">
+                    <ion-label class="sidemenu-label">
+                        <img src="assets/imgs/{{menu.img}}.svg" *ngIf="menu.value != shared.backgroundSubmitProcess"
+                            float-left class="sidemenu-icon">
+                        <ion-icon name="sync" class="ion-spin-animation menu-item-spinner"
+                            *ngIf="menu.value == shared.backgroundSubmitProcess"></ion-icon>
+                        {{menu.title}}
+                    </ion-label>
+
+                    <span class="pending-number"
+                        *ngIf="menu.value == 'pendingSubmission'">{{shared.pendingInspectionCount}}</span>
+                    <span class="pending-number"
+                        *ngIf="menu.value == 'pendingVideo'">{{shared.pendingVideoInspectionCount}}</span>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+
+
+        <!-- app version -->
+        <div class="app-version">
+            <ion-label>
+                v{{shared.appVersion}}
+            </ion-label>
+        </div>
+
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+    <!-- </ion-split-pane> -->
+</ion-app>

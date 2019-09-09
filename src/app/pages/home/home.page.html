@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            {{'homePage'| translate}}
+        </ion-title>
+        <ion-buttons slot="primary">
+            <ion-button class="no-effect">
+                <img class="connection-img" src="{{shared.connectionImg}}">
+            </ion-button>
+            <ion-button class="no-effect ion-spin-animation" *ngIf="shared.backgroundSubmitProcess != undefined">
+                <ion-icon name="sync"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="full-height">
+        <ion-row justify-content-center class="full-height">
+            <ion-col size-md="10" size-lg="10" size-xs="11.5" size-sm="10">
+
+                <!-- registration number -->
+                <ion-item class="ion-margin-bottom custom-input">
+                    <ion-label position="stacked" class="input-label"> <span class="required">*</span>
+                        {{ 'regNumber' | translate }}</ion-label>
+                    <ion-input type="text" name="registrationNumber" [(ngModel)]='RegistrationNumber'
+                        placeholder="{{'enterRegNumber' | translate}}">
+                    </ion-input>
+                </ion-item>
+
+                <!-- Next -->
+                <ion-button type="submit" class="ion-margin-top" expand="block" color="primary" size="large">
+                    {{'next' | translate}}
+                </ion-button>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

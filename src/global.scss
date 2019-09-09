@@ -1,0 +1,306 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+ion-label {
+  @media screen and (min-width: $break-md) {
+    font-size: 20px;
+  }
+}
+
+ion-input {
+  --placeholder-color: #999999;
+  --placeholder-opacity: 1;
+}
+
+.full-height {
+  height: 100%;
+}
+
+// Remove padding at start and transparent background
+.custom-input {
+  --padding-start: 0;
+  --background: transparent;
+  --highlight-color-valid: var(--ion-color-primary);
+  @media screen and (min-width: $break-md) {
+    ion-label.input-label {
+      // font-size: 20px;
+      -webkit-transform: translate3d(0, 50%, 0) scale(0.75);
+      transform: translate3d(0, 50%, 0) scale(0.75);
+      -webkit-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    ion-input,
+    input {
+      // font-size: 24px;
+    }
+  }
+  .password-input {
+    input {
+      margin-right: 15px;
+    }
+  }
+  .password-toggle {
+    position: absolute;
+    right: 5px;
+    top: 40px;
+    color: black;
+    z-index: 2;
+  }
+}
+
+.select-item {
+  .select-placeholder {
+    color: #999;
+  }
+}
+
+@media screen and (min-width: $break-md) {
+  .select-item {
+    // font-size: 24px;
+  }
+  .select-dropdown-label {
+    // font-size: 20px;
+  }
+}
+
+.no-effect {
+  --ripple-color: transparent;
+}
+
+.primary-text {
+  color: var(--ion-color-primary);
+}
+
+// For tnc and privacy policy
+.icon-tick {
+  width: 23px;
+  position: relative;
+  top: 4px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.no-outline:focus,
+.no-outline:active {
+  outline: none;
+}
+
+.connection-img {
+  width: 20px;
+  // margin-top: 6px;
+}
+
+
+.select-dropdown {
+  .alert-wrapper {
+    @media screen and (max-width: $break-md) {
+      --min-width: 325px;
+    }
+    @media screen and (min-width: $break-md) {
+      --min-width: 450px;
+    }
+  }
+}
+
+.msg {
+  width: 100%;
+  border: 1px solid #ffe58f;
+  border-radius: 3px;
+  //   font-size: 16px;
+  padding: 2px 20px 2px 5px;
+  color: rgba(0, 0, 0, 0.85);
+  ion-label {
+    padding: 2px;
+  }
+  .icon {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.msg-warning {
+  background: #fffbe6;
+}
+
+.required {
+  color: red;
+  font-size: larger;
+}
+
+.required-select {
+  color: red;
+  font-size: smaller;
+  font-weight: normal;
+  margin-right: 2px;
+}
+
+.select-dropdown-label {
+  font-size: 12px;
+  position: relative;
+  top: 12px;
+  z-index: 999;
+}
+
+@media screen and (min-width: $break-md) {
+  // .select-dropdown-label{
+  //     font-size: 16px;
+  //   }
+}
+
+.ionic-selectable-icon-inner {
+  top: 14px !important;
+  right: 0;
+  left: inherit !important;
+}
+
+.navbar-icon-size {
+  font-size: 26px;
+}
+
+.camera-badge {
+  background-color: #ffc000;
+  color: #1f3250;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  font-size: 11px;
+  border-radius: 53px;
+  padding: 3px 4px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.navbar-buttons {
+  .connection-img-right-margin {
+    margin-right: 10px;
+  }
+}
+
+.view-marker {
+  path {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    stroke-width: 3px;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100%,
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.img-badge {
+  background-color: #ffc000;
+  color: #1f3250;
+  position: absolute;
+  top: 0;
+  right: 35px;
+  font-size: 10px;
+  border-radius: 3em;
+  padding: 4px 7px;
+  font-weight: bold;
+}
+.menu-item-spinner {
+  font-size: 23px;
+  position: relative;
+  top: 6px;
+  color: black;
+  margin-right: 2px;
+}
+.ion-spin-animation {
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(359deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(359deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(359deg);
+  }
+  100% {
+    -o-transform: rotate(0deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(359deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(359deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,33 @@
+.form-logo {
+    margin-bottom: 10%;
+}
+
+.forgot-password {
+    font-size: 14px;
+    display: block;
+    padding: 15px 0;
+    color: var(--dv-colr);
+}
+
+.signup {
+    font-weight: bold;
+}
+
+.version {
+    position: absolute;
+    right: 5px;
+    color: var(--ion-color-medium);
+}
+
+.img-btn-connection {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.inspection-warning-message.configuration-expired-warning {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 378px;
+    background-color: bisque;
+    border-radius: 5px;
+}

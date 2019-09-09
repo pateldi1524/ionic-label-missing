@@ -1,0 +1,7 @@
+{
+  "name": "BSI",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
